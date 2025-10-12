@@ -1,0 +1,28 @@
+auditor_task:
+  description: >
+    Assess the financial statement clearly using rag tool that contains compliance rules and guidelines:
+    Financial statement: {financial_statement}
+    You must scrutinize the statement based on the compliance guidelines.
+    These are the steps you must follow:
+    1. Capture the flaws or errors from the financial statement.
+    2. Check the compliance document using the rag tool and point out the instances from the text where the guidelines were not followed.
+    3. List out the errors and the accompanying guidelines not followed that are retrieved from the rag tool.
+  expected_output: >
+    List out instances where errors and flaws are found in the financial statement and cite the source and compliance guidelines using rag tool to retrieve them. Use bullet points to structure your response.
+  agent: auditor
+
+analyst_task:
+  description: >
+    Assess the financial statement clearly by assessing the summarised transaction data
+    Financial statement: {financial_statement}
+    You must scrutinize the statement based on the transactions present in the database.
+    These are the steps you must follow:
+    1. Analyse the balance sheet in the financial statement.
+    2. Verify these balance sheet transactions by cross checking the transaction data provided
+    3. Point out discrepancies or inconsistencies if any
+    The transaction data:
+    {transaction_data}
+
+  expected_output: >
+    List out instances where errors and flaws are found in the financial statement and cite the source and compliance guidelines using rag tool to retrieve them. Use bullet points to structure your response.
+  agent: auditor

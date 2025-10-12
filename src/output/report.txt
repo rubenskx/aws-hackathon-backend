@@ -1,0 +1,13 @@
+- Data transcription error in FY2023 Total Liabilities: The Consolidated Balance Sheet shows “3,09” instead of the correct “3,409.” This is a critical rounding/transcription failure. (IFRS/Ind AS 1.54 – Statements must present amounts clearly and accurately.)
+
+- Note‐number leakage into figures: “Borrowings 3.10 13” exposes the note reference (“3.10”) inside the amount column, violating the clear-presentation requirement. (IFRS/Ind AS 1.57 – Financial statements must be presented free from material aggregation or clutter.)
+
+- Missing thousands separator in the same line gives a misleading impression that borrowings are “3.10” instead of USD 13 million. (IAS 1.29 – Information must be presented faithfully.)
+
+- Cross-footing mismatch if “3,09” were taken as USD 3.09 billion: Equity (USD 7,961 m) + Liabilities (USD 3.09 m) ≠ Total Equity & Liabilities (USD 11,370 m). The reported total of USD 11,370 m is correct only when liabilities are USD 3,409 m, confirming the transcription error.
+
+- Minor trade-payables rounding: Billed trade payables should be USD 308 m (2024) yet supporting reconciliation shows USD 307 m + 320 m – 319 m = USD 308 m (correct) but note that “≈” is used. Financial statements must avoid “approximate” figures; amounts should be exact or clearly rounded. (Ind AS Presentation: Schedule III – Figures should be rounded off uniformly.)
+
+- Non-controlling interest disclosure: Balance sheet shows “1 (1)”; while calculations prove the FY2024 closing NCI is USD 1 m, the prior-year comparative “(1)” suggests a negative balance that triggers mandatory disclosure of the reasons for deficit NCI. No explanatory note excerpted. (IFRS 12.12, Ind AS 110.B94.)
+
+- Overall totals agree with transaction roll-forwards (USD 11,967 m = Equity USD 8,186 m + Liabilities USD 3,781 m), but the embedded errors above undermine faithful representation and compliance.

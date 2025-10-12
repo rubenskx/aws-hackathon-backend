@@ -1,0 +1,8 @@
+crewai==0.203.0
+crewai_tools==0.76.0
+python-dotenv==1.1.1
+fastapi
+uvicorn
+python-multipart
+markdown
+beautifulsoup4
