@@ -7,8 +7,8 @@ from strands import Agent, tool
 load_dotenv()
 
 
-@tool
-async def kb_retriever(query:str) -> str:
+@tool(context=True)
+def kb_retriever(query:str) -> str:
     """
     Goal = Retrieves compliance guidelines from the knowledge base created with Accounting Standards relevant to the financial statements
 
@@ -18,6 +18,8 @@ async def kb_retriever(query:str) -> str:
     Returns :
             A dictionary of the response and the rules/citations from the knowledge base
     """
+    
+
     bedrock_agent_runtime = boto3.client(
                             service_name='bedrock-agent-runtime',
                             region_name='us-east-1'  # e.g., 'us-east-1', 'us-west-2'
@@ -40,7 +42,8 @@ async def kb_retriever(query:str) -> str:
     )
     
     answer = response['output']['text']
-    # print(f"$$$$$$$$$$$$$${answer}")
+
+    print(f"$$$$$$$$$$$$$${answer}")
     citations = response.get('citations',[])
 
     return {'answers': answer, 'citations': citations}
