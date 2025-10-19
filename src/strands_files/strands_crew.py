@@ -41,18 +41,22 @@ bedrock_model = BedrockModel(
 )
 
 
-balance_sheet_path = r"F:\udemy\langchain\langgraph\aws-hackathon-backend\src\data\hcl.md"
-transactions_path = r"F:\udemy\langchain\langgraph\aws-hackathon-backend\src\data\transactions.md"
-cashflows_path = ""
-income_path = ""
+balance_sheet_path = r"D:\AI projects\hackathon\aws-hackathon-backend\src\data\airtel_balance_sheet.md"
+transactions_path = r"D:\AI projects\auditiq\AuditIQ\transac_data\airtel_transac.md"
+cashflows_path = r"D:\AI projects\hackathon\aws-hackathon-backend\src\data\airtel_cashflows.md"
+income_path = r"D:\AI projects\hackathon\aws-hackathon-backend\src\data\airtel_income_statement.md"
 
 
 with open(balance_sheet_path, 'r', encoding='utf-8') as f:
     balance_sheet = f.read()
 with open(transactions_path, 'r', encoding="utf-8") as f:
     transaction_data = f.read()
+with open(cashflows_path, 'r', encoding='utf-8') as f:
+    cashflows = f.read()
+with open(income_path, 'r', encoding="utf-8") as f:
+    income = f.read()
 
-state = {'balance_sheet': balance_sheet, 'cashflows': "", 'income': "",
+state = {'balance_sheet': balance_sheet, 'cashflows': cashflows, 'income': income,
          'transaction_data': transaction_data, 'kb_calls': 0, 'auditor_agent_calls': 0, 'analyst_agent_calls': 0, 'investor_assistant_agent_calls': 0}
 
 logger.info("Main program started!!")
@@ -69,7 +73,7 @@ orchestrator = Agent(
 
 
 
-input_mssg = """I have given you the balance sheet of HCL Technologies collected from their website.
+input_mssg = """I have given you the balance sheet of Bharti Airtel collected from their website.
 Please analyse it for errors and understand the financial state of the company. The financial statement data is available and provided to all the agents."""
 
 response = orchestrator(input_mssg)

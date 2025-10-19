@@ -25,11 +25,6 @@ def retrieve_and_generate(knowledge_base_id, query, model_id):
 
     return response
 
-
-
-
-
-
 if __name__=="__main__":
     knowledge_base_id = 'O3IBGYPABF'
     query = 'What information do you have about compliance guidelines on cash flow statement?'
