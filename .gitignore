@@ -3,7 +3,7 @@ src/data
 *.env
 
 src/transactions.db
-
+src/data
 src/uploads
 
 **/__pycache__
